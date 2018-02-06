@@ -17,6 +17,19 @@ body {
   align-self: stretch;
   display: flex;
   justify-content: space-between;
+  @include padding(2.5);
   background-color: $dark-accent;
   color: $neutral-highlight;
+  font-size: 2.2rem;
+  .page-title {
+    padding-left: 20px;
+    font-weight: 300;
+    .title-accent {
+      color: $bright-accent;
+    }
+  }
+  .header-name {
+    padding-right: 20px;
+    font-weight: 600;
+  }
 }
