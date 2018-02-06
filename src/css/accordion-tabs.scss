@@ -79,6 +79,7 @@ body {
         border-bottom: 1px solid $neutral-midtone;
         background-color: $neutral-highlight;
         font-size: 1.4rem;
+        cursor: pointer;
       }
       .tab-header-2 {
         @include left(26);
