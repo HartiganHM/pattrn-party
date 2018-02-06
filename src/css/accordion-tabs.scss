@@ -1,5 +1,9 @@
 @import './variables.scss';
 @import './mixins.scss';
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -10,7 +14,6 @@ body {
     family: $main-font;
     size: 62.5%;
   }
-  box-sizing: border-box;
 }
 
 .header {
@@ -47,7 +50,7 @@ body {
     .section-header {
       align-self: stretch;
       position: relative;
-      border-bottom: 2px solid $neutral-midtone;
+      border-bottom: 1px solid $neutral-midtone;
       .section-title {
         position: relative;
         top: 10px;
@@ -61,7 +64,7 @@ body {
       position: relative;
       @include top(5);
       display: flex;
-      @include width(96);
+      @include width(100);
       @include padding(2);
       .tab-header {
         position: absolute;
@@ -70,9 +73,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include width(20);
+        @include width(24);
         @include padding(2);
         border: 1px solid white;
+        border-bottom: 1px solid $neutral-midtone;
         background-color: $neutral-highlight;
         font-size: 1.4rem;
       }
@@ -90,7 +94,6 @@ body {
         border-bottom: 1px solid white;
         background-color: white;
         font-weight: 600;
-        z-index: 2;
       }
       .tab-content {
         display: none;
@@ -101,12 +104,29 @@ body {
         display: flex;
         @include padding(2);
         border: 1px solid $neutral-midtone;
-        z-index: 1;
+        border-top: none;
         .tab-image {
           flex: 1;
           @include minWidth(30);
           @include height(37.5);
-          background-color: red;
+          border: 1px solid $neutral-midtone;
+          background-color: $neutral-highlight;
+        }
+        .tab-text {
+          @include padding(2);
+          font-size: 1.2rem;
+          line-height: 150%;
+          .tab-text-header {
+            @include margin(2);
+            padding-bottom: 10px;
+            border-bottom: 1px solid $neutral-midtone;
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+          .tab-text-body {
+            @include margin(1);
+            @include padding(1);
+          }
         }
       }
     }
