@@ -1,6 +1,5 @@
 @import './variables.scss';
 @import './mixins.scss';
-
 body {
   display: flex;
   flex-direction: column;
@@ -50,12 +49,11 @@ body {
       border-bottom: 2px solid $neutral-midtone;
       .section-title {
         position: relative;
-        top: 15px;
-        @include padding(2);
-        padding-right: 50px;
+        top: 10px;
+        padding-right: 25px;
         background-color: $neutral-highlight;
         color: $black;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
       }
     }
   }
