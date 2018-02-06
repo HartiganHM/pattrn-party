@@ -40,7 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  .accordian-tabs {
+  .accordion-tabs {
     display: flex;
     flex-direction: column;
     @include width(160);
@@ -62,25 +62,25 @@ body {
 }
 
 @media screen and (max-width: 1634px) {
-  .app-wrapper .accordian-tabs {
+  .app-wrapper .accordion-tabs {
     @include width(128);
   }
 }
 
 @media screen and (max-width: 1334px) {
-  .app-wrapper .accordian-tabs {
+  .app-wrapper .accordion-tabs {
     @include width(96);
   }
 }
 
 @media screen and (max-width: 1014px) {
-  .app-wrapper .accordian-tabs {
+  .app-wrapper .accordion-tabs {
     @include width(64);
   }
 }
 
 @media screen and (max-width: 694px) {
-  .app-wrapper .accordian-tabs {
+  .app-wrapper .accordion-tabs {
     @include width(32);
   }
 }
