@@ -6,6 +6,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  background-color: $neutral-highlight;
   font: {
     family: $main-font;
     size: 62.5%;
@@ -20,7 +21,7 @@ body {
   @include padding(2.5);
   background-color: $dark-accent;
   color: $neutral-highlight;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   .page-title {
     padding-left: 20px;
     font-weight: 300;
@@ -30,6 +31,56 @@ body {
   }
   .header-name {
     padding-right: 20px;
+    font-size: 1.8rem;
     font-weight: 600;
+  }
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  .accordian-tabs {
+    display: flex;
+    flex-direction: column;
+    @include width(160);
+    @include padding(2);
+    .section-header {
+      position: relative;
+      border-bottom: 2px solid $neutral-midtone;
+      .section-title {
+        position: relative;
+        top: 15px;
+        @include padding(2);
+        padding-right: 50px;
+        background-color: $neutral-highlight;
+        color: $black;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1634px) {
+  .app-wrapper .accordian-tabs {
+    @include width(128);
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .app-wrapper .accordian-tabs {
+    @include width(96);
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .app-wrapper .accordian-tabs {
+    @include width(64);
+  }
+}
+
+@media screen and (max-width: 694px) {
+  .app-wrapper .accordian-tabs {
+    @include width(32);
   }
 }
