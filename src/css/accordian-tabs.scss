@@ -4,6 +4,13 @@
 body {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font: {
+    family: $main-font;
+    size: 62.5%;
+  }
+  box-sizing: border-box;
 }
 
 .header {
