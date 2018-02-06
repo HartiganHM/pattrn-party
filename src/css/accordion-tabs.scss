@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: $neutral-highlight;
+  background-color: white;
   font: {
     family: $main-font;
     size: 62.5%;
@@ -19,7 +19,7 @@ body {
   justify-content: space-between;
   @include padding(2.5);
   background-color: $dark-accent;
-  color: $neutral-highlight;
+  color: white;
   font-size: 2.4rem;
   .page-title {
     padding-left: 20px;
@@ -42,43 +42,97 @@ body {
   .accordion-tabs {
     display: flex;
     flex-direction: column;
-    @include width(160);
+    align-items: center;
     @include padding(2);
     .section-header {
+      align-self: stretch;
       position: relative;
       border-bottom: 2px solid $neutral-midtone;
       .section-title {
         position: relative;
         top: 10px;
         padding-right: 25px;
-        background-color: $neutral-highlight;
+        background-color: white;
         color: $black;
         font-size: 1.2rem;
+      }
+    }
+    .accordion-box {
+      position: relative;
+      @include top(5);
+      display: flex;
+      @include width(96);
+      @include padding(2);
+      .tab-header {
+        position: absolute;
+        @include top(2);
+        @include left(2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include width(20);
+        @include padding(2);
+        border: 1px solid white;
+        background-color: $neutral-highlight;
+        font-size: 1.4rem;
+      }
+      .tab-header-2 {
+        @include left(26);
+      }
+      .tab-header-3 {
+        @include left(50);
+      }
+      .tab-header-4 {
+        @include left(74);
+      }
+      .active-tab-header {
+        border: 1px solid $neutral-midtone;
+        border-bottom: 1px solid white;
+        background-color: white;
+        font-weight: 600;
+        z-index: 2;
+      }
+      .tab-content {
+        display: none;
+      }
+      .active-content {
+        position: relative;
+        top: 62px;
+        display: flex;
+        @include padding(2);
+        border: 1px solid $neutral-midtone;
+        z-index: 1;
+        .tab-image {
+          flex: 1;
+          @include minWidth(30);
+          @include height(37.5);
+          background-color: red;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 1634px) {
-  .app-wrapper .accordion-tabs {
-    @include width(128);
-  }
-}
+// @media screen and (max-width: 1634px) {
+//   .app-wrapper .accordion-tabs {
+//     @include width(128);
+//   }
+// }
 
-@media screen and (max-width: 1334px) {
-  .app-wrapper .accordion-tabs {
-    @include width(96);
-  }
-}
+// @media screen and (max-width: 1334px) {
+//   .app-wrapper .accordion-tabs {
+//     @include width(96);
+//   }
+// }
 
-@media screen and (max-width: 1014px) {
-  .app-wrapper .accordion-tabs {
-    @include width(64);
-  }
-}
+// @media screen and (max-width: 1014px) {
+//   .app-wrapper .accordion-tabs {
+//     @include width(64);
+//   }
+// }
 
-@media screen and (max-width: 694px) {
-  .app-wrapper .accordion-tabs {
-    @include width(32);
-  }
-}
+// @media screen and (max-width: 694px) {
+//   .app-wrapper .accordion-tabs {
+//     @include width(32);
+//   }
+// }
