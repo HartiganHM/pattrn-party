@@ -134,26 +134,64 @@ body {
   }
 }
 
-// @media screen and (max-width: 1634px) {
-//   .app-wrapper .accordion-tabs {
-//     @include width(128);
-//   }
-// }
+@media screen and (max-width: 1039px) {
+  .app-wrapper .accordion-tabs {
+    padding: 0;
+    .section-header {
+      @include margin(1);
+    }
+    .accordion-box {
+      @include width(76);
+      .tab-header {
+        @include width(18);
+      }
+      .tab-header-2 {
+        @include left(20);
+      }
+      .tab-header-3 {
+        @include left(38);
+      }
+      .tab-header-4 {
+        @include left(56);
+      }
+      .active-content .tab-text {
+        font-size: 1rem;
+        .tab-text-header {
+          @include margin(2);
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
 
-// @media screen and (max-width: 1334px) {
-//   .app-wrapper .accordion-tabs {
-//     @include width(96);
-//   }
-// }
-
-// @media screen and (max-width: 1014px) {
-//   .app-wrapper .accordion-tabs {
-//     @include width(64);
-//   }
-// }
-
-// @media screen and (max-width: 694px) {
-//   .app-wrapper .accordion-tabs {
-//     @include width(32);
-//   }
-// }
+@media screen and (max-width: 767px) {
+  .app-wrapper .accordion-tabs {
+    padding: 0;
+    .section-header {
+      @include margin(1);
+    }
+    .accordion-box {
+      @include width(76);
+      .tab-header {
+        @include width(18);
+      }
+      .tab-header-2 {
+        @include left(20);
+      }
+      .tab-header-3 {
+        @include left(38);
+      }
+      .tab-header-4 {
+        @include left(56);
+      }
+      .active-content .tab-text {
+        font-size: 1rem;
+        .tab-text-header {
+          @include margin(2);
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
