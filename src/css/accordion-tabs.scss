@@ -81,6 +81,9 @@ body {
         color: $neutral-lowlight;
         font-size: 1.4rem;
         cursor: pointer;
+        .mobile-tab-indicator {
+          display: none;
+        }
       }
       .tab-header-2 {
         @include left(26);
@@ -193,9 +196,12 @@ body {
           position: relative;
           top: 0;
           left: 0;
-          justify-content: flex-start;
+          justify-content: space-between;
           @include width(29.8);
           border: 1px solid white;
+          .mobile-tab-indicator {
+            display: block;
+          }
         }
         .tab-header-2 {
           left: 0;
