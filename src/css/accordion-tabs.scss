@@ -78,6 +78,7 @@ body {
         border: 1px solid white;
         border-bottom: 1px solid $neutral-midtone;
         background-color: $neutral-highlight;
+        color: $neutral-lowlight;
         font-size: 1.4rem;
         cursor: pointer;
       }
@@ -118,6 +119,7 @@ body {
           font-size: 1.2rem;
           line-height: 150%;
           .tab-text-header {
+            display: flex;
             @include margin(2);
             padding-bottom: 10px;
             border-bottom: 1px solid $neutral-midtone;
@@ -155,10 +157,8 @@ body {
         @include left(56);
       }
       .active-content .tab-text {
-        font-size: 1rem;
         .tab-text-header {
           @include margin(2);
-          font-size: 1rem;
         }
       }
     }
@@ -169,12 +169,23 @@ body {
   .app-wrapper .accordion-tabs {
     padding: 0;
     .section-header {
-      @include margin(1);
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      @include padding(2);
+      .section-title {
+        top: 0;
+        padding-right: initial;
+      }
     }
     .accordion-box {
       display: flex;
       flex-direction: column;
       @include width(30);
+      @include margin(1);
+      margin-bottom: 20px;
+      padding: 0;
+      border: 1px solid $neutral-midtone;
       .content-box {
         display: flex;
         flex-direction: column;
@@ -182,7 +193,9 @@ body {
           position: relative;
           top: 0;
           left: 0;
-          @include width(26);
+          justify-content: flex-start;
+          @include width(29.8);
+          border: 1px solid white;
         }
         .tab-header-2 {
           left: 0;
@@ -196,17 +209,19 @@ body {
         .active-content {
           top: 0;
           flex-direction: column;
+          padding: 0;
+          border: none;
           .tab-image {
             height: 150px;
             min-width: unset;
+            border-left: none;
+            border-right: none;
           }
           .tab-text {
             flex-direction: column;
             padding: 0;
-            font-size: 1rem;
             .tab-text-header {
-              @include margin(2);
-              font-size: 1rem;
+              
             }
           }
         }
