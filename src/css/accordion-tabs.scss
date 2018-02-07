@@ -172,24 +172,43 @@ body {
       @include margin(1);
     }
     .accordion-box {
-      @include width(76);
-      .tab-header {
-        @include width(18);
-      }
-      .tab-header-2 {
-        @include left(20);
-      }
-      .tab-header-3 {
-        @include left(38);
-      }
-      .tab-header-4 {
-        @include left(56);
-      }
-      .active-content .tab-text {
-        font-size: 1rem;
-        .tab-text-header {
-          @include margin(2);
-          font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      @include width(30);
+      .content-box {
+        display: flex;
+        flex-direction: column;
+        .tab-header {
+          position: relative;
+          top: 0;
+          left: 0;
+          @include width(26);
+        }
+        .tab-header-2 {
+          left: 0;
+        }
+        .tab-header-3 {
+          left: 0;
+        }
+        .tab-header-4 {
+          left: 0;
+        }
+        .active-content {
+          top: 0;
+          flex-direction: column;
+          .tab-image {
+            height: 150px;
+            min-width: unset;
+          }
+          .tab-text {
+            flex-direction: column;
+            padding: 0;
+            font-size: 1rem;
+            .tab-text-header {
+              @include margin(2);
+              font-size: 1rem;
+            }
+          }
         }
       }
     }
