@@ -1,21 +1,33 @@
-const toggleActiveTab = (event) => {
+const toggleActiveTab = event => {
   const clickedTab = event.target.closest('.tab-header');
 
   if (!$(clickedTab).hasClass('.active-tab-header')) {
-    $('.tab-header').removeClass('active-tab-header')
-    $(clickedTab).addClass('active-tab-header')
+    $('.tab-header').removeClass('active-tab-header');
+    $(clickedTab).addClass('active-tab-header');
 
     toggleActiveContent(clickedTab);
+    toggleMobileHeaderSymbol(clickedTab);
   }
-}
+};
 
-const toggleActiveContent = (tab) => {
-  const clickedContent = $(tab).siblings('.tab-content')[0]
+const toggleActiveContent = tab => {
+  const clickedContent = $(tab).siblings('.tab-content')[0];
 
   if (!$(clickedContent).hasClass('.active-content')) {
-    $('.tab-content').removeClass('active-content')
-    $(clickedContent).addClass('active-content')
+    $('.tab-content').removeClass('active-content');
+    $(clickedContent).addClass('active-content');
   }
-}
+};
 
-$('.tab-header').click((event) => toggleActiveTab(event))
+const toggleMobileHeaderSymbol = tab => {
+  const clickedMobileHeaderSymbol = $(tab).children()[1];
+
+  if (clickedMobileHeaderSymbol.innerText === '+') {
+    document
+      .querySelectorAll('.mobile-tab-indicator')
+      .forEach(tab => (tab.innerText = '+'));
+    clickedMobileHeaderSymbol.innerText = '−';
+  }
+};
+
+$('.tab-header').click(event => toggleActiveTab(event));
