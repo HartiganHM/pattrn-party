@@ -112,7 +112,7 @@ body {
         border-top: none;
         .tab-image {
           flex: 1;
-          @include minWidth(30);
+          @include minWidth(29.9);
           @include height(37.5);
           border: 1px solid $neutral-midtone;
           background-color: $neutral-highlight;
@@ -244,9 +244,6 @@ body {
           .tab-text {
             flex-direction: column;
             padding: 0;
-            .tab-text-header {
-              
-            }
           }
         }
       }
