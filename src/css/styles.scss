@@ -538,10 +538,12 @@ body {
           display: flex;
           @include padding(2);
           font-size: 1.6rem;
+          cursor: pointer;
         }
       }
       .header-dropdown {
         flex-direction: column;
+        display: none;
         background-color: $neutral-lesslight;
         .header-nav-link {
           align-items: center;
