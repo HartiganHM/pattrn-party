@@ -362,6 +362,36 @@ body {
       @include width(76);
     }
   }
+  .header-bar-wrapper {
+
+    .section-header {
+      @include margin(1);
+    }
+    .header-bar-box {
+      @include width(76);
+      .header-icon {
+        margin-right: unset;
+      }
+      .header-dropdown {
+
+        .header-nav-link {
+          text-align: center;
+        }
+        .search-wrapper {
+          margin-left: unset;
+          .search-icon {
+
+          }
+          .search-input {
+
+          }
+        }
+      }
+    }
+    .view-code-button {
+
+    } 
+  }
 }
 
 @media screen and (max-width: 767px) {
