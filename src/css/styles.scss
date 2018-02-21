@@ -209,7 +209,7 @@ body {
     }
     .card-2 {
       grid-column: 3;
-      grid-row: 1
+      grid-row: 1;
     }
     .card-7 {
       grid-column: 2 / 4;
@@ -252,7 +252,19 @@ body {
     }
   }
   .header-bar-box {
-
+    position: relative;
+    @include top(5);
+    display: flex;
+    @include width(100);
+    @include padding(2);
+    background-color: $neutral-midtone;
+    .header-icon {
+      @include height(10);
+      @include width(10);
+      border: 1px solid $neutral-lowlight;
+      border-radius: 100px;
+      background-color: $neutral-highlight;
+    }
   }
   .view-code-button {
     align-self: center;
