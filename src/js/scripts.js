@@ -30,4 +30,9 @@ const toggleMobileHeaderSymbol = tab => {
   }
 };
 
+const toggleHeaderDropdown = event => {
+  $('.header-dropdown').slideToggle()
+}
+
 $('.tab-header').click(event => toggleActiveTab(event));
+$('.menu-text').click(event => toggleHeaderDropdown(event));
