@@ -231,6 +231,45 @@ body {
   }
 }
 
+.header-bar-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  @include padding(2);
+  .section-header {
+    align-self: stretch;
+    position: relative;
+    border-bottom: 1px solid $neutral-midtone;
+    .section-title {
+      position: relative;
+      top: 10px;
+      padding-right: 25px;
+      background-color: white;
+      color: $black;
+      font-size: 1.2rem;
+    }
+  }
+  .header-bar-box {
+
+  }
+  .view-code-button {
+    align-self: center;
+    width: 250px;
+    margin: 20px;
+    padding: 10px;
+    background-color: $dark-accent;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-accent-hover;
+    }
+  }
+}
+
 @media screen and (max-width: 1039px) {
   .accordion-wrapper .accordion-tabs {
     padding: 0;
