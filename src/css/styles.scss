@@ -257,13 +257,57 @@ body {
     display: flex;
     @include width(100);
     @include padding(2);
+    margin-bottom: 60px;
     background-color: $neutral-midtone;
+    font-size: 1.2rem;
     .header-icon {
-      @include height(10);
-      @include width(10);
+      @include height(8);
+      @include width(8);
+      margin-right: 20px;
       border: 1px solid $neutral-lowlight;
-      border-radius: 100px;
+      border-radius: 80px;
       background-color: $neutral-highlight;
+    }
+    .header-dropdown {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      .header-nav-link {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        @include padding(1);
+        border-bottom: 2px solid $neutral-midtone;
+        transition: 0.2s;
+        &:hover {
+          border-bottom: 2px solid $neutral-highlight;
+        }
+      }
+      .search-wrapper {
+        flex: 1;
+        display: flex;
+        @include padding(1);
+        margin-left: 20px;
+        border: 1px solid $neutral-lowlight;
+        background-color: $neutral-highlight;
+        .search-icon {
+          @include height(3);
+          @include width(3);
+          background-image: url('./search-icon.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        .search-input {
+          flex: 1;
+          margin-left: 10px;
+          border: none;
+          background: none;
+          font-size: 1.2rem;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
     }
   }
   .view-code-button {
